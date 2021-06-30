@@ -264,13 +264,12 @@ nav .logo img {
 }
 .about-bg {
   background: var(--secondary-color);
-  height: 300vh;
+  height: 280vh;
   width: 100%;
   transform: skewY(5deg);
   position: absolute;
   z-index: -1;
   left: 0;
-  top: 200px;
 }
 #about .heading {
   margin: 3rem;
@@ -334,6 +333,7 @@ section .content p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 .profiles-container .image-container img {
@@ -464,7 +464,8 @@ section .content p {
 /* Footer */
 footer #footer {
   display: flex;
-  position: relative;
+  position: absolute;
+  bottom: 0;
 }
 
 footer .footer-container {
@@ -475,8 +476,8 @@ footer .footer-container {
   align-items: center;
   background-color: #4a4a4a;
   color: #f0f0f0;
-  position: absolute;
-  bottom: -345%;
+  position: relative;
+  margin-bottom: 0;
 }
 
 footer .footer-container .col1 {
@@ -586,3 +587,9 @@ footer .footer-container .col3 .footer-connect .socmed a {
 footer .footer-container .col3 .footer-connect .socmed a:hover {
   color: var(--primary-color);
 }
+
+/* @media (max-width: 798px) {
+  header {
+
+  }
+} */

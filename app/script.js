@@ -1,7 +1,7 @@
 let navbar = document.getElementById("nav");
 
 window.onscroll = function () {
-    if(document.body.scrollTop >= 100 || document.documentElement.scrollTop >= 100) {
+    if(document.body.scrollTop >= 10 || document.documentElement.scrollTop >= 10) {
         navbar.classList.add("scroll");
     }
     else
