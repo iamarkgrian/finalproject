@@ -264,7 +264,7 @@ nav .logo img {
 }
 .about-bg {
   background: var(--secondary-color);
-  height: 280vh;
+  height: 285vh;
   width: 100%;
   transform: skewY(5deg);
   position: absolute;
@@ -321,6 +321,7 @@ nav .logo img {
 section .content p {
   font-size: 22px;
   padding: 20px;
+  line-height: 40px;
 }
 /* End of About */
 
@@ -477,7 +478,6 @@ footer .footer-container {
   background-color: #4a4a4a;
   color: #f0f0f0;
   position: relative;
-  margin-bottom: 0;
 }
 
 footer .footer-container .col1 {
@@ -586,6 +586,37 @@ footer .footer-container .col3 .footer-connect .socmed a {
 
 footer .footer-container .col3 .footer-connect .socmed a:hover {
   color: var(--primary-color);
+}
+
+/* Breadcrumbs */
+
+.breadcrumbs-container {
+  display: flex;
+  height: 40px;
+  padding-top: 3.75rem;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 2.5rem;
+}
+
+.breadcrumb ul {
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+}
+
+.breadcrumb li::before {
+  content: " > ";
+  margin: 10px;
+}
+
+.breadcrumb li:first-child::before {
+  content: "";
+}
+/* Google Maps */
+#map {
+  width: 100%;
+  height: 400px;
 }
 
 /* @media (max-width: 798px) {
