@@ -33,7 +33,7 @@
         </div>
         <ul class="navbar">
           <li><a href="index.html">Home</a></li>
-          <li><a href="">Project</a></li>
+          <li><a href="login.php">Project</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
@@ -42,23 +42,65 @@
     <!-- End of Header -->
 
     <!-- Contact -->
-    <main id="contact">
-      <div class="breadcrumbs-container">
-        <div aria-label="Breadcrumb" class="breadcrumb">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li>
-              <span aria-current="page">About</span>
-            </li>
-          </ul>
+    <main id="contact" class="container">
+      <div class="modal">
+        <div class="heading">
+          <h1>Contact Us</h1>
+        </div>
+        <div class="breadcrumbs-container">
+          <div aria-label="Breadcrumb" class="breadcrumb">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li>
+                <span aria-current="page">Contact</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="background"></div>
+      <div class="contact-bg"></div>
+      <div class="contact-container">
+        <div class="contact-heading">
+          <h1>Let's keep in touch!</h1>
         </div>
 
-        <div class="map-container">
-          <div id="map"></div>
+        <div class="contact-content">
+          <div class="row-1">
+            <h5>Enzo Donato</h5>
+            <p><i class="fas fa-envelope"></i>Mr.donato02@gmail.com</p>
+            <p><i class="fas fa-phone-alt"></i>09458262491</p>
+          </div>
+          <div class="row-2">
+            <h5>Nino de Galicia</h5>
+            <p><i class="fas fa-envelope"></i>ninoangelomdegalicia@gmail.com</p>
+            <p><i class="fas fa-phone-alt"></i>09262407690</p>
+          </div>
+          <div class="row-3">
+            <h5>Mark Grian Tisoy</h5>
+            <p><i class="fas fa-envelope"></i>iamarkgrian@gmail.com</p>
+            <p><i class="fas fa-phone-alt"></i>09566199147</p>
+          </div>
         </div>
 
+        <div class="contact-form">
+          <form>
+            <label for="name">Name</label>
+            <input type="text" name="name" />
+            <label for="email">Email</label>
+            <input type="email" name="email" />
+            <label for="subject">Subject</label>
+            <input type="text" />
+            <label for="message">Message</label>
+            <textarea name="message" cols="30" rows="10">
+Your Message Here</textarea
+            >
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
     </main>
-    
+
     <!-- End of Contact -->
 
     <!-- Footer -->
