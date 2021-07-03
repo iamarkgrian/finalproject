@@ -19,6 +19,7 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -84,6 +85,10 @@ nav {
 
 .scroll {
   background-color: #f0f0f0;
+}
+
+.scroll .mainMenu span {
+  background-color: #000;
 }
 
 .scroll li a {
@@ -194,6 +199,8 @@ nav .logo img {
 
 .login-form .wrapper h2 {
   font-size: 20px;
+  width: 100%;
+  text-align: center;
   margin-bottom: 10px;
 }
 
@@ -207,7 +214,7 @@ nav .logo img {
 .login-form .wrapper form input {
   margin: 7px 0;
   height: 30px;
-  width: 230px;
+  width: 100%;
   outline: none;
   border: none;
   border-bottom: 2px solid #12c2e9;
@@ -804,4 +811,420 @@ button {
 #contact .contact-container .contact-form form button:hover {
   background-position: 100% 0;
   transition: all 0.4s ease-in-out;
+}
+
+/* Hamburger menu */
+.mainMenu {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  transition: all 0.4s ease-in;
+}
+.mainMenu > span {
+  width: 40px;
+  height: 3px;
+  display: block;
+  margin: 10px;
+  border-radius: 50px;
+  background-color: #f0f0f0;
+}
+
+.activeMenu {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  transition: all 0.4s ease-in;
+}
+
+.activeMenu span:nth-child(1) {
+  width: 40px;
+  height: 3px;
+  display: block;
+  margin: 10px;
+  border-radius: 50px;
+  background-color: #f0f0f0;
+  transform-origin: center center;
+  transform: rotate(45deg) translate(8px, 12px);
+}
+
+.activeMenu span:nth-child(2) {
+  opacity: 0;
+}
+
+.activeMenu span:nth-child(3) {
+  width: 40px;
+  height: 3px;
+  display: block;
+  margin: 10px;
+  border-radius: 50px;
+  background-color: #f0f0f0;
+  transform-origin: center center;
+  transform: rotate(-45deg) translate(5px, -11px);
+}
+
+@media (max-width: 798px) {
+  #nav .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #8b83fd;
+    color: #000;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #nav .navbar li {
+    margin: 20px;
+  }
+
+  #nav .navbar li a {
+    font-size: 24px;
+  }
+
+  #nav .logo {
+    position: absolute;
+    left: 20px;
+  }
+
+  .hero-slogan {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+  }
+
+  .hero-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+  }
+
+  .hero-image img {
+    width: 400px;
+  }
+
+  .login-form {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 15%;
+    top: 95%;
+    z-index: 1;
+  }
+
+  .login-form .wrapper {
+    width: 70%;
+  }
+
+  header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about .heading {
+    display: flex;
+    justify-content: center;
+  }
+
+  #about .sec1 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about .sec1 .image-content img {
+    width: 350px;
+  }
+
+  #about .sec1 .content {
+    width: 450px;
+    font-size: 19px;
+    text-align: center;
+  }
+
+  #about .sec2 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about .sec2 .image-content img {
+    width: 350px;
+  }
+
+  #about .sec2 .content {
+    width: 450px;
+    font-size: 19px;
+    text-align: center;
+  }
+  .about-bg {
+    height: 350vh;
+  }
+  #profiles .profiles-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 120vh;
+    gap: 40px;
+  }
+  #profiles .profiles-container > div {
+    height: 900px;
+    padding: 20px;
+  }
+  footer {
+    margin-top: 20%;
+  }
+
+  footer .footer-container {
+    display: flex;
+    height: 130vh;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  footer .footer-container .col1 {
+    display: flex;
+    height: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: nowrap;
+  }
+  footer .footer-container .col1 .footer-reach {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+  }
+
+  footer .footer-container .col2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+  }
+
+  footer .footer-container .col2 .site-map {
+    width: 80%;
+    height: 20%;
+  }
+
+  footer .footer-container .col3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+  }
+}
+
+@media (max-width: 1100px) {
+  nav .navbar {
+    display: none;
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #8b83fd;
+  }
+
+  #nav .navbar li {
+    margin: 20px;
+  }
+
+  #nav .navbar li a {
+    font-size: 24px;
+  }
+
+  .hero-slogan {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+  }
+
+  .hero-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+  }
+
+  .hero-image img {
+    width: 600px;
+  }
+
+  .login-form {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 15%;
+    top: 95%;
+    z-index: 1;
+  }
+
+  .login-form .wrapper {
+    width: 70%;
+  }
+
+  header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #about .heading {
+    display: flex;
+    justify-content: center;
+  }
+
+  #about .sec1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+  }
+
+  #about .sec1 .image-content img {
+    width: 300px;
+  }
+
+  #about .sec1 .content {
+    font-size: 19px;
+    text-align: center;
+  }
+
+  #about .sec2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    overflow: hidden;
+  }
+
+  #about .sec2 .image-content img {
+    width: 300px;
+  }
+
+  #about .sec2 .content {
+    width: 450px;
+    font-size: 17px;
+    text-align: center;
+  }
+  .about-bg {
+    height: 350vh;
+  }
+  #profiles .profiles-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    gap: 60px;
+  }
+  #profiles .profiles-container > div {
+    height: 900px;
+    padding: 20px;
+  }
+  footer {
+    margin-top: 20%;
+  }
+
+  footer .footer-container {
+    display: flex;
+    height: 130vh;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10%;
+  }
+
+  footer .footer-container .col1 {
+    display: flex;
+    height: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: nowrap;
+  }
+  footer .footer-container .col1 .footer-reach {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+  }
+
+  footer .footer-container .col2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+  }
+
+  footer .footer-container .col2 .site-map {
+    width: 50%;
+    height: 30%;
+  }
+
+  footer .footer-container .col3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+  }
 }
